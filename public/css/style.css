@@ -1,0 +1,155 @@
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.body-container {
+    padding: 20px;
+    flex: 1;
+    margin: 10px !important;
+}
+
+.navbar {
+    height: 5.5rem !important;
+    background-color: whitesmoke;
+}
+
+
+.nav-link {
+    color: #222222 !important;
+}
+
+/* footer */
+
+.f-info {
+    text-align: center;
+    height: 10 rem;
+    background-color: whitesmoke;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: space-evenly;
+
+}
+
+
+.f-info-socials i {
+    font-size: 1.2 rem;
+    margin-right: 1 rem;
+}
+
+.f-info-company,
+.f-info-links,
+.f-info-socials {
+    width: 100%;
+}
+
+.f-info-links a {
+    text-decoration: none;
+    color: #222222;
+}
+
+.f-info-links a:hover {
+    text-decoration: underline;
+}
+
+/* Listings */
+
+.card {
+    border: none !important;
+    margin-bottom: 2rem;
+}
+
+.card-img-top {
+    aspect-ratio: 3/3;
+    border-radius: 1rem !important;
+}
+
+.card-body {
+    padding: 0px !important;
+    text-decoration: none !important;
+}
+
+.listing-link {
+    text-decoration: none;
+}
+
+.card-img-overlay {
+    opacity: 0;
+}
+
+.card-img-overlay:hover {
+    opacity: 0.2;
+    background-color: aliceblue;
+}
+
+/* Show-page */
+
+
+.body-view-one {
+    width: 25% !important;
+}
+
+.body-view-two {
+    width: 50% !important;
+}
+
+.body-view-three {
+    width: 25% !important;
+}
+
+.show-img {
+    aspect-ratio: 3/2;
+    width: 100% !important;
+    border-radius: 1rem !important;
+    margin-bottom: 3% !important;
+
+}
+
+.show-body {
+    padding: 5%;
+}
+
+.card-text-right {
+    text-align: right;
+}
+
+@media only screen and (min-width: 1100px) {
+    .body-view {
+        display: flex;
+    }
+}
+
+@media only screen and (max-width: 1100px) {
+
+    .body-view-one {
+        width: 15% !important;
+    }
+
+    .body-view-two {
+        width: 70% !important;
+    }
+
+    .body-view-three {
+        width: 15% !important;
+    }
+
+}
+
+
+@media only screen and (max-width: 481px) {
+
+    .body-view-one {
+        width: 5% !important;
+    }
+
+    .body-view-two {
+        width: 90% !important;
+    }
+
+    .body-view-three {
+        width: 5% !important;
+    }
+
+}

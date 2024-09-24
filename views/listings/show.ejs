@@ -1,0 +1,70 @@
+<% layout("/layouts/boilerplate")%>
+
+    <body>
+        <div class="row">
+            <div class="body-view">
+                <div class="body-view-one col"></div>
+                <div class="body-view-two col">
+                    <h2>
+                        <%=listing.title%>
+                    </h2>
+                    <br>
+                    <div class="container px-4">
+                        <div class="row gx-g">
+                            <br>
+                            <div class="col"><img
+                                    src="<%= listing.image.url ? listing.image.url : 'https://images.unsplash.com/photo-1726915257451-a14bd105ca55?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D' %>"
+                                    class="show show-img" alt="Invalid Image URL"
+                                    onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1726822980761-31519c691f3c?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D';">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="show-body">
+                        <div class="container px-4">
+                            <div class="row gx-g">
+                                <div class="col">
+                                    <p>
+                                        Location: <b>
+                                            <%=listing.location%>
+                                                <%=listing.country%>
+                                        </b>
+                                    </p>
+                                </div>
+                                <div class="col">
+                                    <p class="card-text-right">
+                                        <b><%=listing.price.toLocaleString('en-IN', { style: 'currency' ,
+                                                currency: 'INR' , }) %></b>
+                                        /night
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="container px-4">
+                            <div class="row gx-g">
+                                <div class="col">
+                                    <p class="card-text">
+                                        Description:<br>
+                                        <%=listing.description%> <br>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="container px-4">
+                            <div class="row gx-g">
+                                <div class="col"><a href="/listings/<%=listing._id %>/edit"><button class="btn btn-dark"
+                                            style="background-color: #00A86B">UPDATE</button></a></div>
+                                <div class="col card-text-right">
+                                    <form method="post" action="/listings/<%=listing._id %>?_method=DELETE"><button
+                                            class="btn btn-dark" style="background-color: #a80000">DELETE</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="body-view-three col"></div>
+            </div>
+        </div>
+
+    </body>
